@@ -56,10 +56,10 @@ body {
 /* --- The main header bar (full-width background) --- */
 .site-header {
     background-color: #f8f9fa; /* A light, clean background color */
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    //padding-top: 1rem;
+    //padding-bottom: 1rem;
     width: 100%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
 }
 
 /* --- The container for logo and navigation --- */
@@ -88,7 +88,7 @@ body {
 
 /* --- Logo Styling --- */
 .site-logo img {
-    max-height: 50px; /* Adjust the height of your logo */
+    max-height: 100px; /* Adjust the height of your logo */
     width: auto;      /* Maintains the correct aspect ratio */
     display: block;   /* Removes extra space that can appear under images */
 }
