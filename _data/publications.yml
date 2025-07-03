@@ -1,0 +1,79 @@
+- title: "A Method for Large-Scale Machine Learning"
+  conference: "Journal of Modern Artificial Intelligence (JMAI), 2024"
+  authors: "C. Yu, Y. Huang"
+  image: "/assets/images/lamot.png" # Add this line
+  year: 2024
+  links:
+    paper_url: "/assets/papers/paper1.pdf"
+    code_url: "https://github.com/user/project1"
+
+- title: "Advanced Neural Network Architectures"
+  conference: "International Conference on Computer Vision (ICCV), 2024"
+  authors: "L. Ye, Y. Huang"
+  image: "/assets/images/lamot.png" # Add this line
+  year: 2024
+  links:
+    paper_url: "/assets/papers/paper2.pdf"
+
+- title: "HIGH WAY"
+  conference: "Conference on Neural Information Processing Systems (NeurIPS), 2023"
+  authors: "T.Le, Y. Huang"
+  image: "/assets/images/lamot.png" # Add this line
+  year: 2022
+  links:
+    paper_url: "/assets/papers/paper3.pdf"
+    code_url: "https://github.com/user/project3"
+
+- title: "Foundations of Data-Centric AI"
+  conference: "Conference on Neural Information Processing Systems (NeurIPS), 2023"
+  authors: "T.Le, Y. Huang"
+  image: "/assets/images/lamot.png" # Add this line
+  year: 2023
+  links:
+    paper_url: "/assets/papers/paper3.pdf"
+    code_url: "https://github.com/user/project3"
+
+- title: "NOT HIGH WAY"
+  conference: "Conference on Neural Information Processing Systems (NeurIPS), 2023"
+  authors: "T.Le, Y. Huang"
+  image: "/assets/images/lamot.png" # Add this line
+  year: 2025
+  links:
+    paper_url: "/assets/papers/paper3.pdf"
+    code_url: "https://github.com/user/project3"
+
+- title: "NOT HIGH WAY"
+  conference: "Conference on Neural Information Processing Systems (NeurIPS), 2023"
+  authors: "T.Le, Y. Huang"
+  image: "/assets/images/lamot.png" # Add this line
+  year: 2025
+  links:
+    paper_url: "/assets/papers/paper3.pdf"
+    code_url: "https://github.com/user/project3"
+
+- title: "NOT HIGH WAY"
+  conference: "Conference on Neural Information Processing Systems (NeurIPS), 2023"
+  authors: "T.Le, Y. Huang"
+  image: "/assets/images/lamot.png" # Add this line
+  year: 2026
+  links:
+    paper_url: "/assets/papers/paper3.pdf"
+    code_url: "https://github.com/user/project3"
+
+- title: "NOT HIGH WAY"
+  conference: "Conference on Neural Information Processing Systems (NeurIPS), 2023"
+  authors: "T.Le, Y. Huang"
+  image: "/assets/images/lamot.png" # Add this line
+  year: 2024
+  links:
+    paper_url: "/assets/papers/paper3.pdf"
+    code_url: "https://github.com/user/project3"
+
+- title: "NOT HIGH WAY"
+  conference: "Conference on Neural Information Processing Systems (NeurIPS), 2023"
+  authors: "T.Le, Y. Huang"
+  image: "/assets/images/lamot.png" # Add this line
+  year: 2024
+  links:
+    paper_url: "/assets/papers/paper3.pdf"
+    code_url: "https://github.com/user/project3"

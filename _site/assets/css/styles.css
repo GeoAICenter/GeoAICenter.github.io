@@ -1,0 +1,278 @@
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto";
+}
+
+.site-container {
+  flex: 1;
+}
+
+/* --- Styling for Page Content --- */
+.page-content {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; /* Centers the text inside the description */
+}
+
+/* --- Container for the Featured Image --- */
+.featured-image-container {
+  margin-top: 2rem; /* Adds some space above the image */
+  margin-bottom: 2rem; /* Adds some space below the image */
+}
+
+.featured-image-container img {
+  max-width: 100%;
+  max-height: 100vh;
+  border-radius: 8px; /* Optional: adds slightly rounded corners to the image */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow */
+}
+
+/* --- Styling for the Description Text --- */
+.description {
+  max-width: 100%; /* Constrains the width of the text to make it more readable */
+  margin-left: auto; /* These two lines center the description box itself */
+  margin-right: auto;
+}
+
+.description p {
+  font-size: 1.5rem; /* Adjust this value as needed */
+  line-height: 1.6; /* Improves spacing between lines for better readability */
+  font-family: "Montserrat"; /* Sets a different font for all headings */
+}
+
+/* =================================== */
+/* Adaptive Header & Navigation CSS   */
+/* =================================== */
+/* --- The main header bar (full-width background) --- */
+.site-header {
+  background-color: #f8f9fa; /* A light, clean background color */
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
+}
+
+/* --- The container for logo and navigation --- */
+.header-container {
+  /* Core Flexbox Layout */
+  display: flex;
+  justify-content: space-between; /* Pushes logo and nav to opposite ends */
+  align-items: center; /* Vertically aligns items */
+  /* Adaptive Margins (using padding on the container) */
+  /* This creates the space on the left and right edges.
+     You can change '5vw' (5% of viewport width) to a fixed value like '2rem'
+     if you prefer a non-scaling margin. */
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  /* Adaptive Gap */
+  /* This ensures a minimum space between the logo and the navigation
+     links when the screen becomes very narrow. */
+  gap: 1rem;
+}
+
+/* --- Logo Styling --- */
+.site-logo img {
+  max-height: 50px; /* Adjust the height of your logo */
+  width: auto; /* Maintains the correct aspect ratio */
+  display: block; /* Removes extra space that can appear under images */
+}
+
+/* --- Navigation Links Container --- */
+nav {
+  display: flex;
+  flex-wrap: wrap; /* Allows links to wrap onto the next line on small screens */
+  justify-content: flex-end; /* Aligns links to the right, especially when wrapped */
+  gap: 0.5rem; /* Sets the space between each navigation link */
+}
+
+/* --- Individual Navigation Links --- */
+nav a {
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+  border-radius: 9999px; /* Creates the "pill" shape */
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  background-color: lightgreen;
+  color: white;
+  transition: all 0.2s ease-in-out; /* Smooth transition for hover effects */
+}
+
+/* --- Hover State for Links --- */
+nav a:hover {
+  background-color: green;
+  transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+/* --- Active/Current Page Link Styling --- */
+nav a.current_at_header {
+  background-color: green; /* A primary blue for the active link */
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.25); /* Adds a glow effect */
+}
+
+.site-footer {
+  text-align: center;
+  background-color: #f8f9fa;
+}
+
+/* =================================== */
+/* Members Page Styles        */
+/* =================================== */
+.members-page {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.members-section-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.section-divider {
+  border: 0;
+  height: 1px;
+  background-color: #e0e0e0;
+  margin: 4rem 0;
+}
+
+.link-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Change this to center the links */
+  gap: 0.25rem; /* Add a gap for spacing between links */
+}
+
+.image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.link-grid-item {
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.image-grid-item {
+  flex-basis: calc(50% - 1rem);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.image-grid-item img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.caption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* --- Publication Page Styles --- */
+.publications-list {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.publication-group {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.publication-group:last-child {
+  border-bottom: none;
+}
+
+.year-column {
+  flex-basis: 120px; /* Width of the year column */
+  flex-shrink: 0;
+  padding-right: 2rem;
+}
+
+.year-column h3 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-top: 0;
+}
+
+.pubs-column {
+  flex: 1; /* Takes up the remaining space */
+}
+
+.publication-item {
+  display: flex; /* Make the item a flex container */
+  align-items: flex-start; /* Align items to the top */
+  gap: 1.5rem; /* Space between image and text */
+  margin-bottom: 1.5rem;
+}
+
+.publication-image {
+  flex-basis: 180px; /* Set a fixed width for the image container */
+  flex-shrink: 0;
+}
+
+.publication-item:last-child {
+  margin-bottom: 0;
+}
+
+.publication-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.publication-details {
+  flex: 1; /* Allow text details to take up remaining space */
+}
+
+.publication-title {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin: 0 0 0.25rem 0;
+}
+
+.publication-authors,
+.publication-conference {
+  font-style: italic;
+  color: #555;
+  margin: 0 0 0.5rem 0;
+}
+
+.publication-links a {
+  text-decoration: none;
+  color: #007bff;
+  margin-right: 1rem;
+  font-weight: 500;
+}
+
+.publication-links a:hover {
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=styles.css.map */

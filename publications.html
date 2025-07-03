@@ -1,0 +1,44 @@
+---
+layout: default
+title: Publications
+---
+
+<div class="publications-list">
+    {% assign pubs_by_year = site.data.publications | group_by: "year" | sort: "name" | reverse %}
+
+    {% for group in pubs_by_year %}
+    <div class="publication-group">
+        <div class="year-column">
+            <h3>{{ group.name }}</h3>
+        </div>
+
+        <div class="pubs-column">
+            {% for item in group.items %}
+            <div class="publication-item">
+
+                <div class="publication-image">
+                    {% if item.image %}
+                    <img src="{{ item.image }}" alt="Image for {{ item.title }}">
+                    {% endif %}
+                </div>
+
+                <div class="publication-details">
+                    <p class="publication-title">{{ item.title }}</p>
+                    <p class="publication-authors">{{ item.authors }}</p>
+                    <p class="publication-conference">{{ item.conference }}</p>
+                    <div class="publication-links">
+                        {% if item.links.paper_url %}
+                        <a href="{{ item.links.paper_url }}" target="_blank">📄 Paper</a>
+                        {% endif %}
+                        {% if item.links.code_url %}
+                        <a href="{{ item.links.code_url }}" target="_blank">💻 Code</a>
+                        {% endif %}
+                    </div>
+                </div>
+
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endfor %}
+</div>
