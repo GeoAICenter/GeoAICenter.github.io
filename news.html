@@ -1,0 +1,29 @@
+---
+layout: default
+title: Publications
+---
+
+<div class="publications-list">
+    {% assign pubs_by_year = site.data.news | group_by: "year" | sort: "name" | reverse %}
+
+    {% for group in pubs_by_year %}
+    <div class="publication-group">
+        <div class="year-column">
+            <h3>{{ group.name }}</h3>
+        </div>
+
+        <div class="pubs-column">
+            {% assign news_by_month = group.items |sort: "month" %}
+            {% for item in news_by_month %}
+            <div class="publication-item">
+
+                <div class="publication-details">
+                    <p class="publication-conference">{{ item.new }}. {{ site.data.num_month_2_words[item.month].name }}, {{ item.year }}</p>
+                </div>
+
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endfor %}
+</div>
