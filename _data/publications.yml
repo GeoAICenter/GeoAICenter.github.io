@@ -1,16 +1,16 @@
 - title: "Harnessing llms for cross-city od flow prediction"
-  conference: "International Conference on Advances in Geographic Information Systems 2024 (ACM SIGSPATIAL 2024)"
+  conference: "International Conference on Advances in Geographic Information Systems (ACM SIGSPATIAL)"
   authors: "C. Yu, X. Xie, Y. Huang, C. Qiu"
-  image: "/assets/images/Harnessing_LLMs_OD_Flow_Prediction.png" # Add this line
+  image: "/assets/images/Harnessing_LLMs_OD_Flow_Prediction.png"
   year: 2024
   links:
     paper_url: "https://dl.acm.org/doi/abs/10.1145/3678717.3691308"
     code_url: "https://github.com/user/project1"
 
 - title: "Localization Through Deep Learning in New and Low Sampling Rate Environments"
-  conference: "Pacific-Asia Conference on Knowledge Discovery and Data Mining (PAKDD 2024)"
+  conference: "Pacific-Asia Conference on Knowledge Discovery and Data Mining (PAKDD)"
   authors: "T. Le, Y. Huang"
-  image: "/assets/images/LocNet.png" # Add this line
+  image: "/assets/images/LocNet.png"
   year: 2024
   links:
     paper_url: "https://link.springer.com/chapter/10.1007/978-981-97-2262-4_24"
@@ -18,9 +18,74 @@
 - title: "Radio Map Estimation with Deep Dual Path Autoencoders and Skip Connection Learning"
   conference: "IEEE International Symposium on Personal, Indoor and Mobile Radio Communications (PIMRC)"
   authors: "W. Locke, N. Lokhmachev, Y. Huang, X. Li"
-  image: "/assets/images/DualPath.png" # Add this line
+  image: "/assets/images/DualPath.png"
   year: 2023
   links:
     paper_url: "https://ieeexplore.ieee.org/document/10293748"
     code_url: "https://github.com/user/project3"
-    
+
+
+- title: "Improving the Reusability of Pre-trained Language Models in Real-world Applications"
+  conference: "IEEE International Conference on Information Reuse and Integration (IRI)"
+  authors: "S. Ghanbarzadeh, H. Palangi, Y. Huang, R. Moreno, H. Khanpour"
+  image: "/assets/images/IRI.png"
+  year: 2023
+  links:
+    paper_url: "https://arxiv.org/pdf/2307.10457"
+
+- title: "A Universal Scheme for Partitioned Dynamic Shortest Path Index"
+  conference: "Consortium for Reliability and Reproducibility (CoRR)"
+  authors: "M. Zhang, X. Zhou, L. Li, Z. Liu, G. Trajcevski, Y. Huang, X. Zhou"
+  image: "/assets/images/Universal_Scheme.png"
+  year: 2023
+  links:
+    paper_url: "https://arxiv.org/pdf/2310.08213v2"
+
+- title: "Gender-tuning: Empowering Fine-tuning for Debiasing Pre-trained Language Models"
+  conference: "Findings of the Association for Computational Linguistics: ACL"
+  authors: "S. Ghanbarzadeh, Y. Huang, H. Palangi, R. Moreno, H. Khanpour"
+  image: "/assets/images/Gender_Tuning.png"
+  year: 2023
+  links:
+    paper_url: "https://arxiv.org/pdf/2307.10522"
+
+- title: "Context Helps Determine Spatial Knowledge from Tweets"
+  conference: "Findings of the Association for Computational Linguistics: IJCNLP-AACL (Findings)"
+  authors: "Z. Xiao, Y. Huang, E. Blanco"
+  image: "/assets/images/Tweet_paper_Xiao.png"
+  year: 2023
+  links:
+    paper_url: "https://aclanthology.org/2023.findings-ijcnlp.13.pdf"
+
+- title: "Data and Resources Paper: A Multi-granularity Decade-Long Geo-Tagged Twitter Dataset for Spatial Computing"
+  conference: "International Conference on Advances in Geographic Information Systems (ACM SIGSPATIAL)"
+  authors: "Y. Feng, Z. Meng, C. Clemmer, H. Fan, Y. Huang"
+  image: "/assets/images/Tweets_Geo.png"
+  year: 2023
+  links:
+    paper_url: "https://hengfan2010.github.io/publication/SIGSPATIAL-2023.pdf"
+
+- title: "Proceedings of the 8th ACM SIGSPATIAL International Workshop on Security Response using GIS"
+  conference: "International Conference on Advances in Geographic Information Systems (ACM SIGSPATIAL)"
+  authors: "Y. Huang, J. Thill, H. Zhang, D. Guo, Y. Liu, W. Xu, B. Chen"
+  image: "/assets/images/Tweets_Geo.png"
+  year: 2023
+  links:
+    paper_url: "https://dl.acm.org/doi/abs/10.1145/3615884"
+
+- title: "Analyzing Large Language Models’ Capability in Location Prediction"
+  conference: "Proceedings of the 2024 Joint International Conference on Computational Linguistics, Language Resources and Evaluation (LREC-COLING)"
+  authors: "Z. Xiao, Y. Huang, E. Blanco"
+  image: "/assets/images/Analyze_Xiao.png"
+  year: 2024
+  links:
+    paper_url: "https://aclanthology.org/2024.lrec-main.85.pdf"
+
+- title: "Protecting Vehicle Location Privacy with Contextually-Driven Synthetic Location Generation"
+  conference: "International Conference on Advances in Geographic Information Systems (ACM SIGSPATIAL)"
+  authors: "S. Yadav, C. Yu, X. Xie, Y. Huang, C. Qiu"
+  image: "/assets/images/Traffic_Yadav.png"
+  year: 2024
+  links:
+    paper_url: "https://dl.acm.org/doi/pdf/10.1145/3678717.3691211"
+
