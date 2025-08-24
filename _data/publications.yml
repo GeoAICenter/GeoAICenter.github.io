@@ -1,3 +1,33 @@
+- title: "ViT-RefineNet for Directional Signal Radio Map Reconstruction from Sparse Samples"
+  conference: "International Conference on Advances in Geographic Information Systems (ACM SIGSPATIAL)"
+  authors: "L. Ye, T. Le, Y. Huang"
+  image: "/assets/images/ViT_RefinedNet.png"
+  year: 2025
+  links:
+#    paper_url: "https://ijcai-preprints.s3.us-west-1.amazonaws.com/2025/2587.pdf"
+    code_url: "https://github.com/GeoAICenter/ViT-RefineNet"
+
+
+- title: "EfficientLocNet: High-Performance and Lightweight Radio Source Localization with Multi-Scale Attention"
+  conference: "International Conference on Advances in Geographic Information Systems (ACM SIGSPATIAL)"
+  authors: "T. Le, S. Yadav, X. Xie, C. Qiu, X. Li, Y. Huang"
+  image: "/assets/images/EfficientLocNet.png"
+  year: 2025
+  links:
+#    paper_url: "https://ijcai-preprints.s3.us-west-1.amazonaws.com/2025/2587.pdf"
+#    code_url: "https://github.com/user/project1"
+
+
+- title: "RoLocMe: A Robust Multi-agent Source Localization System with Learning-based Map Estimation"
+  conference: "International Joint Conference on Artificial Intelligence (IJCAI)"
+  authors: "T. Le, L. Ye, Y. Huang"
+  image: "/assets/images/RoLocMe.png"
+  year: 2025
+  links:
+    paper_url: "https://ijcai-preprints.s3.us-west-1.amazonaws.com/2025/2587.pdf"
+#    code_url: "https://github.com/user/project1"
+
+
 - title: "Harnessing llms for cross-city od flow prediction"
   conference: "International Conference on Advances in Geographic Information Systems (ACM SIGSPATIAL)"
   authors: "C. Yu, X. Xie, Y. Huang, C. Qiu"
@@ -22,7 +52,7 @@
   year: 2023
   links:
     paper_url: "https://ieeexplore.ieee.org/document/10293748"
-    code_url: "https://github.com/user/project3"
+#    code_url: "https://github.com/user/project3"
 
 
 - title: "Improving the Reusability of Pre-trained Language Models in Real-world Applications"

@@ -1,39 +1,5 @@
-- new: "Journal of Modern Artificial Intelligence (JMAI), 07, 2024"
-  year: 2023
-  month: 12
-
-- new: "IJCAI"
-  year: 2023
-  month: 12
-
-- new: "AAAI"
-  year: 2023
-  month: 06
-
-- new: "AAMAS"
-  year: 2023
-  month: 10
-
-- new: "Journal of Modern Artificial Intelligence (JMAI), 2024"
-  year: 2024
-  month: 11
-
-- new: "Journal of Modern Artificial Intelligence (JMAI), 2024"
-  year: 2022
-  month: 01
-
-- new: "Journal of Modern Artificial Intelligence (JMAI), 2024"
-  year: 2021
-  month: 02
-
-- new: "Journal of Modern Artificial Intelligence (JMAI), 2024"
-  year: 2028
-  month: 03
-
-- new: "Journal of Modern Artificial Intelligence (JMAI), 2024"
-  year: 2029
-  month: 04
-
-- new: "Journal of Modern Artificial Intelligence (JMAI), 2024"
-  year: 2010
-  month: 05
+- news: "A research grant from TxDOT has been awarded."
+  description: "Drs. Yan Huang and Heng Fan and their collaborators at Texas A&M-based Texas Transportation Institute have received a grant of $400K from the Texas Department of Transportation. 
+  The project will leverage crowd-sourced data and Artificial Intelligence for timely detection of roadway anomalies for enhanced situational awareness and rapid response."
+  image: "/assets/images/txDOT_logo.png"
+  year: 2025
