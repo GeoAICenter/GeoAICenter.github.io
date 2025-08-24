@@ -13,12 +13,18 @@ title: News
         </div>
 
         <div class="pubs-column">
-            {% assign news_by_month = group.items |sort: "month" %}
-            {% for item in news_by_month %}
+            {% for item in group.items %}
             <div class="publication-item">
 
+                <div class="publication-image">
+                    {% if item.image %}
+                    <img src="{{ item.image }}" alt="Image for {{ item.title }}">
+                    {% endif %}
+                </div>
+
                 <div class="publication-details">
-                    <p class="publication-conference">{{ item.new }}. {{ site.data.num_month_2_words[item.month].name }}, {{ item.year }}</p>
+                    <p class="publication-title">{{ item.news }}</p>
+                    <p>{{ item.description }}</p>
                 </div>
 
             </div>
