@@ -1,3 +1,12 @@
+- title: "FUSE-Traffic: Fusion of Unstructured and Structured Data for Event-aware Traffic Forecasting"
+  conference: "International Conference on Advances in Geographic Information Systems (ACM SIGSPATIAL)"
+  authors: "C. Yu, X. Xie, Y. Huang, C. Qiu"
+  image: "/assets/images/FUSE_Traffic.png"
+  year: 2025
+  links:
+    #    paper_url: "https://ijcai-preprints.s3.us-west-1.amazonaws.com/2025/2587.pdf"
+#    code_url: "https://github.com/GeoAICenter/ViT-RefineNet"
+
 - title: "ViT-RefineNet for Directional Signal Radio Map Reconstruction from Sparse Samples"
   conference: "International Conference on Advances in Geographic Information Systems (ACM SIGSPATIAL)"
   authors: "L. Ye, T. Le, Y. Huang"
