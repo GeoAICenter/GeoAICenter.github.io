@@ -78,7 +78,7 @@
   GivenName: "DAT THANH"
   role: "PhD Student"
   title: ""
-  image: "/assets/images/HuangY.jpg"
+  image: "/assets/images/THANH_LE_IMG.png"
   links:
     - type: "HomePage"
       url: ""
@@ -93,7 +93,7 @@
   GivenName: "CHENYANG"
   role: "PhD Student"
   title: ""
-  image: "/assets/images/HuangY.jpg"
+  image: "/assets/images/chenyang.png"
   links:
     - type: "HomePage"
       url: ""
@@ -108,7 +108,7 @@
   GivenName: "LYUZHOU"
   role: "PhD Student"
   title: ""
-  image: "/assets/images/HuangY.jpg"
+  image: "/assets/images/Lyuzhou.jpeg"
   links:
     - type: "HomePage"
       url: ""
@@ -123,7 +123,7 @@
   GivenName: "TRUNG SON"
   role: "PhD Student"
   title: ""
-  image: "/assets/images/HuangY.jpg"
+  image: "/assets/images/SON.jpeg"
   links:
     - type: "HomePage"
       url: ""
