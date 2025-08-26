@@ -205,9 +205,15 @@ nav a.current_at_header {
 .caption {
     margin-top: 0.5rem;
     font-size: 0.9rem;
+    font-family: Monaco, serif;
     color: #666;
 }
-
+/* --- news Page Styles --- */
+.news-description{
+    font-family: Monaco, serif;
+    color: #555;
+    margin: 0 0 0.5rem 0;
+}
 /* --- Publication Page Styles --- */
 
 .publications-list {
