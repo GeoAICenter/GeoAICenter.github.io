@@ -5,7 +5,7 @@
   year: 2025
   links:
     #    paper_url: "https://ijcai-preprints.s3.us-west-1.amazonaws.com/2025/2587.pdf"
-#    code_url: "https://github.com/GeoAICenter/ViT-RefineNet"
+    code_url: "https://github.com/GeoAICenter/FUSE-Traffic_Sigspatial2025"
 
 - title: "ViT-RefineNet for Directional Signal Radio Map Reconstruction from Sparse Samples"
   conference: "International Conference on Advances in Geographic Information Systems (ACM SIGSPATIAL)"
