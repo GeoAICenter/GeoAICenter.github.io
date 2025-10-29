@@ -131,7 +131,21 @@
       url: ""
     - type: "linkedIn"
       url: ""
-
+      
+- SurName: "Hossein"
+  GivenName: "Tashakori"
+  role: "PhD Student"
+  title: ""
+  image: "/assets/images/hossein.jpg"
+  links:
+    - type: "HomePage"
+      url: ""
+    - type: "github"
+      url: ""
+    - type: "linkedIn"
+      url: ""
+    - type: "scholar"
+      url: ""
 #- SurName: "PHAN"
 #  GivenName: "TRUNG SON"
 #  role: "PhD Student"
