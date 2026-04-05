@@ -1,12 +1,27 @@
 /* =================================== */
-/* 🎨 LAB COLOR PALETTE (Tech Green)   */
+/* 🎨 LAB COLOR PALETTE (CSS Variables)*/
 /* =================================== */
-$primary-color: #059669;     /* A sharp, modern emerald green */
-$primary-hover: #047857;     /* A slightly darker green for hover effects */
-$text-dark: #1e293b;         /* Deep slate for high contrast and readability */
-$text-light: #64748b;        /* Cool grey for dates/authors */
-$bg-light: #f8fafc;          /* Very slight cool off-white for backgrounds */
-$border-color: #e2e8f0;      /* Clean, subtle borders */
+:root {
+    /* LIGHT MODE COLORS */
+    --primary-color: #059669;
+    --primary-hover: #047857;
+    --text-dark: #1e293b;
+    --text-light: #64748b;
+    --bg-light: #f8fafc;
+    --bg-card: #ffffff;           /* Used for navbar, cards, and image borders */
+    --border-color: #e2e8f0;
+}
+
+[data-theme="dark"] {
+    /* DARK MODE COLORS */
+    --primary-color: #10b981;     /* Brighter green to pop on dark backgrounds */
+    --primary-hover: #34d399;
+    --text-dark: #f8fafc;         /* Off-white text */
+    --text-light: #94a3b8;        /* Lighter grey */
+    --bg-light: #0f172a;          /* Deep slate background */
+    --bg-card: #1e293b;           /* Slightly lighter slate for cards/nav */
+    --border-color: #334155;
+}
 
 /* =================================== */
 /* Base Setup & Fluid Containers       */
@@ -20,9 +35,11 @@ body {
     min-height: 100%;
     display: flex;
     flex-direction: column;
-    font-family: 'Inter', sans-serif; /* NEW: Ultra-clean body font */
-    color: $text-dark;
+    font-family: 'Inter', sans-serif;
+    color: var(--text-dark);
+    background-color: var(--bg-light); /* Added to control background */
     line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth fade effect */
 }
 
 .site-container {
@@ -31,29 +48,30 @@ body {
 }
 
 h1, h2, h3, h4, .members-section-title {
-    font-family: 'Poppins', sans-serif; /* NEW: Geometric, modern heading font */
-    color: $primary-color;
-    letter-spacing: -0.5px; /* Pulls the letters slightly tighter for a tech look */
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary-color);
+    letter-spacing: -0.5px;
 }
 
 /* =================================== */
 /* Adaptive Header & Navigation CSS    */
 /* =================================== */
 .site-header {
-    background-color: #ffffff;
+    background-color: var(--bg-card); /* Swapped from hardcoded white */
     width: 100%;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     position: sticky;
     top: 0;
     z-index: 100;
+    transition: background-color 0.3s ease;
 }
 
 .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 95%;          /* Fluid width: takes up 95% of ANY screen */
-    max-width: 1600px;   /* Prevents it from looking absurd on ultra-wide monitors */
+    width: 95%;
+    max-width: 1600px;
     margin: 0 auto;
     padding: 1rem 0;
     gap: 1rem;
@@ -70,6 +88,7 @@ nav {
     flex-wrap: wrap;
     justify-content: flex-end;
     gap: 0.5rem;
+    align-items: center; /* Centers the new theme button with the text */
 }
 
 nav a {
@@ -79,25 +98,46 @@ nav a {
     font-size: 1rem;
     font-weight: 600;
     text-decoration: none;
-    color: $text-dark;
+    color: var(--text-dark);
     transition: all 0.3s ease;
 }
 
 nav a:hover {
-    background-color: $bg-light;
-    color: $primary-color;
+    background-color: var(--bg-light);
+    color: var(--primary-color);
+}
+
+/* Theme Toggle Button Styling */
+#theme-toggle {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-dark);
+    padding: 0.5rem 0.8rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    margin-left: 1rem;
+    transition: all 0.3s ease;
+}
+
+#theme-toggle:hover {
+    background-color: var(--bg-light);
+    color: var(--primary-color);
+    border-color: var(--primary-color);
 }
 
 /* Mobile Header Adjustment */
 @media (max-width: 850px) {
     .header-container {
-        flex-direction: column; /* Stacks logo and nav on smaller screens */
+        flex-direction: column;
     }
     nav { justify-content: center; }
+    #theme-toggle { margin-left: 0; margin-top: 0.5rem; }
 }
 
 /* =================================== */
-/* Home Page Hero Section (FIXED)      */
+/* Home Page Hero Section              */
 /* =================================== */
 .hero-section {
     display: flex;
@@ -121,11 +161,11 @@ nav a:hover {
 
 .hero-subtitle {
     font-size: 1.25rem;
-    color: $text-light;
+    color: var(--text-light);
 }
 
 .hero-image {
-    flex: 1.2; /* Gives slightly more room to the image */
+    flex: 1.2;
 }
 
 .hero-image img {
@@ -135,10 +175,9 @@ nav a:hover {
     object-fit: cover;
 }
 
-/* Mobile Hero Adjustment */
 @media (max-width: 950px) {
     .hero-section {
-        flex-direction: column; /* Stacks image under text on tablets/phones */
+        flex-direction: column;
         text-align: center;
         margin: 2rem auto;
     }
@@ -155,11 +194,12 @@ nav a:hover {
 }
 
 .card {
-    background: #ffffff;
+    background: var(--bg-card); /* Swapped from hardcoded white */
     padding: 3rem;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.06);
     margin-bottom: 3rem;
+    transition: background-color 0.3s ease;
 }
 
 .description p {
@@ -173,9 +213,10 @@ nav a:hover {
 /* =================================== */
 .site-footer {
     width: 100%;
-    background-color: $bg-light;
-    border-top: 1px solid $border-color;
+    background-color: var(--bg-card); /* Matched to nav/cards */
+    border-top: 1px solid var(--border-color);
     margin-top: auto;
+    transition: background-color 0.3s ease;
 }
 
 .footer-container {
@@ -184,11 +225,11 @@ nav a:hover {
     margin: 0 auto;
     padding: 2rem 0;
     text-align: center;
-    color: $text-light;
+    color: var(--text-light);
 }
 
 /* =================================== */
-/* Grid Layouts (Members & Publications)*/
+/* Grid Layouts (Members)              */
 /* =================================== */
 .image-grid {
     display: flex;
@@ -213,49 +254,7 @@ nav a:hover {
     border-radius: 50%;
     object-fit: cover;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    border: 3px solid #ffffff;
-}
-
-/* Publication styling adjustments for fluidity */
-.publications-list {
-    width: 95%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem 0;
-}
-
-.publication-group {
-    display: flex;
-    margin-bottom: 2.5rem;
-    padding-bottom: 2rem;
-    border-bottom: 1px solid $border-color;
-}
-
-.year-column {
-    flex-basis: 120px;
-    flex-shrink: 0;
-}
-
-.publication-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 1.5rem;
-    padding: 1rem;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
-}
-
-.publication-image {
-    flex-basis: 200px;
-    flex-shrink: 0;
-}
-
-/* Mobile Publication Adjustment */
-@media (max-width: 768px) {
-    .publication-group { flex-direction: column; }
-    .year-column { margin-bottom: 1rem; }
-    .publication-item { flex-direction: column; }
-    .publication-image { width: 100%; flex-basis: auto; }
+    border: 3px solid var(--bg-card); /* Swapped from hardcoded white */
 }
 
 /* =================================== */
@@ -266,7 +265,7 @@ nav a:hover {
     align-items: flex-start;
     margin-bottom: 3rem;
     padding-bottom: 2rem;
-    border-bottom: 1px solid $border-color;
+    border-bottom: 1px solid var(--border-color);
     gap: 2rem;
 }
 
@@ -274,7 +273,7 @@ nav a:hover {
     flex: 0 0 80px;
     font-size: 1.5rem;
     font-weight: 700;
-    color: $primary-color;
+    color: var(--primary-color);
     margin: 0;
 }
 
@@ -286,7 +285,7 @@ nav a:hover {
 }
 
 .row-image {
-    flex: 0 0 250px; /* This absolutely prevents the image from getting too wide */
+    flex: 0 0 250px;
 }
 
 .row-image img {
@@ -294,22 +293,21 @@ nav a:hover {
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-    object-fit: contain; /* Ensures logos aren't stretched */
+    object-fit: contain;
     max-height: 200px;
-    background-color: white; /* Helpful for transparent logos */
+    background-color: #ffffff; /* We leave this hardcoded white so transparent logos don't disappear in dark mode */
 }
 
 .row-text {
-    flex: 1; /* Takes up the remaining space for paragraphs */
+    flex: 1;
 }
 
 .row-text h3 {
     margin-top: 0;
     font-size: 1.3rem;
-    color: $text-dark;
+    color: var(--text-dark);
 }
 
-/* Mobile Adjustments for Rows */
 @media (max-width: 768px) {
     .content-row { flex-direction: column; gap: 0.5rem; }
     .row-year { flex: none; margin-bottom: 1rem; }
@@ -323,20 +321,20 @@ nav a:hover {
 .social-links {
     display: flex;
     justify-content: center;
-    gap: 15px; /* Spaces the icons out horizontally */
+    gap: 15px;
     margin-top: 12px;
 }
 
 .social-links a {
-    color: $text-light;
+    color: var(--text-light);
     font-size: 1.2rem;
     text-decoration: none;
     transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .social-links a:hover {
-    color: $primary-color;
-    transform: translateY(-3px); /* Cute little bounce when hovered */
+    color: var(--primary-color);
+    transform: translateY(-3px);
 }
 
 /* =================================== */
@@ -345,19 +343,21 @@ nav a:hover {
 .contact-container {
     display: flex;
     gap: 3rem;
-    background: #ffffff;
+    background: var(--bg-card); /* Swapped from hardcoded white */
     padding: 3rem;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    transition: background-color 0.3s ease;
 }
 
 .contact-details {
-    flex: 1; /* Takes up 50% of the space */
+    flex: 1;
 }
 
 .contact-details h2 {
     margin-top: 0;
     font-size: 1.8rem;
+    color: var(--text-dark);
 }
 
 .contact-details p {
@@ -367,28 +367,27 @@ nav a:hover {
 }
 
 .contact-details a {
-    color: $primary-color;
+    color: var(--primary-color);
     text-decoration: none;
     font-weight: 600;
 }
 
 .contact-details a:hover {
-    color: $primary-hover;
+    color: var(--primary-hover);
     text-decoration: underline;
 }
 
 .contact-map {
-    flex: 1; /* Takes up the other 50% */
+    flex: 1;
     min-height: 350px;
     border-radius: 8px;
-    overflow: hidden; /* This forces the map to respect the rounded corners */
+    overflow: hidden;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
-/* Mobile Adjustments for Contact Page */
 @media (max-width: 768px) {
     .contact-container {
-        flex-direction: column; /* Stacks text on top of map on small screens */
+        flex-direction: column;
         padding: 2rem;
     }
     .contact-map {

@@ -10,19 +10,51 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+    </script>
 </head>
 <body>
-{% include navigation.html %}
-  <div class="site-container">
-        <main class="main-content">
-            {{ content }}
-        </main>
-  </div>
 
-  <div class="site-footer">
-        <footer class="footer-container">
-            <p>&copy; GAC Lab {{ site.time | date: '%Y' }}. All Rights Reserved. </p>
-        </footer>
-  </div>
-  </body>
+{% include navigation.html %}
+
+<div class="site-container">
+    <main class="main-content">
+        {{ content }}
+    </main>
+</div>
+
+<div class="site-footer">
+    <footer class="footer-container">
+        <p>&copy; GAC Lab {{ site.time | date: '%Y' }}. All Rights Reserved. </p>
+    </footer>
+</div>
+
+<script>
+    const toggleButton = document.getElementById('theme-toggle');
+
+    if (toggleButton) {
+        // Update button text on load
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        toggleButton.innerHTML = currentTheme === 'dark' ? '<i class="fas fa-sun"></i> Light' : '<i class="fas fa-moon"></i> Dark';
+
+        // Listen for clicks
+        toggleButton.addEventListener('click', () => {
+            let currentTheme = document.documentElement.getAttribute('data-theme');
+            let targetTheme = currentTheme === 'light' ? 'dark' : 'light';
+
+            // Apply theme to HTML tag
+            document.documentElement.setAttribute('data-theme', targetTheme);
+
+            // Save to browser storage
+            localStorage.setItem('theme', targetTheme);
+
+            // Update the button icon/text
+            toggleButton.innerHTML = targetTheme === 'dark' ? '<i class="fas fa-sun"></i> Light' : '<i class="fas fa-moon"></i> Dark';
+        });
+    }
+</script>
+</body>
 </html>
