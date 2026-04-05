@@ -13,67 +13,6 @@
     - type: "scholar"
       url: ""
 
-#- SurName: "QIU3"
-#  GivenName: "CHENXI"
-#  role: "Faculty"
-#  title: "Associate Professor"
-#  image: "/assets/images/HuangY.jpg"
-#  links:
-#    - type: "HomePage"
-#      url: ""
-#    - type: "github"
-#      url: ""
-#    - type: "linkedIn"
-#      url: ""
-#    - type: "scholar"
-#      url: ""
-###
-#- SurName: "QIU4"
-#  GivenName: "CHENXI"
-#  role: "Faculty"
-#  title: "Associate Professor"
-#  image: "/assets/images/HuangY.jpg"
-#  links:
-#    - type: "HomePage"
-#      url: ""
-#    - type: "github"
-#      url: ""
-#    - type: "linkedIn"
-#      url: ""
-#    - type: "scholar"
-#      url: ""
-#
-#
-#- SurName: "QIU2"
-#  GivenName: "CHENXI"
-#  role: "Faculty"
-#  title: "Associate Professor"
-#  image: "/assets/images/HuangY.jpg"
-#  links:
-#    - type: "HomePage"
-#      url: ""
-#    - type: "github"
-#      url: ""
-#    - type: "linkedIn"
-#      url: ""
-#    - type: "scholar"
-#      url: ""
-##
-#- SurName: "QIU"
-#  GivenName: "CHENXI"
-#  role: "Faculty"
-#  title: "Associate Professor"
-#  image: "/assets/images/HuangY.jpg"
-#  links:
-#    - type: "HomePage"
-#      url: ""
-#    - type: "github"
-#      url: ""
-#    - type: "linkedIn"
-#      url: ""
-#    - type: "scholar"
-#      url: ""
-
 - SurName: "LE"
   GivenName: "DAT THANH"
   role: "PhD Student"
@@ -146,11 +85,13 @@
       url: ""
     - type: "scholar"
       url: ""
-#- SurName: "PHAN"
-#  GivenName: "TRUNG SON"
-#  role: "PhD Student"
+###########################################################################
+# In case need to add Master, Undergraduate, Alumni
+# - SurName: "33"
+#  GivenName: "2223 123"
+#  role: "Master Student"
 #  title: ""
-#  image: "/assets/images/HuangY.jpg"
+#  image: "/assets/images/.jpg"
 #  links:
 #    - type: "HomePage"
 #      url: ""
@@ -159,11 +100,11 @@
 #    - type: "linkedIn"
 #      url: ""
 #
-#- SurName: "PHAN"
-#  GivenName: "TRUNG SON"
-#  role: "PhD Student"
+#- SurName: "33"
+#  GivenName: "2223 123"
+#  role: "Undergraduate Student"
 #  title: ""
-#  image: "/assets/images/HuangY.jpg"
+#  image: "/assets/images/.jpg"
 #  links:
 #    - type: "HomePage"
 #      url: ""
@@ -172,11 +113,12 @@
 #    - type: "linkedIn"
 #      url: ""
 #
-#- SurName: "PHAN"
-#  GivenName: "TRUNG SON"
-#  role: "PhD Student"
+#
+#- SurName: "33"
+#  GivenName: "2223 123"
+#  role: "Alumni"
 #  title: ""
-#  image: "/assets/images/HuangY.jpg"
+#  image: "/assets/images/.jpg"
 #  links:
 #    - type: "HomePage"
 #      url: ""
@@ -184,4 +126,4 @@
 #      url: ""
 #    - type: "linkedIn"
 #      url: ""
-#
+
