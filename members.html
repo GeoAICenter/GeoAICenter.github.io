@@ -4,10 +4,10 @@ title: Members
 ---
 <div class="page-content members-page">
 
+    {% assign faculty = site.data.members | where: "role", "Faculty" %}
+    {% if faculty.size > 0 %}
     <h1 class="members-section-title">Faculty</h1>
     <div class="image-grid">
-        {% assign faculty = site.data.members | where: "role", "Faculty" %}
-
         {% for person in faculty %}
         <div class="image-grid-item">
             <img src="{{ person.image }}" alt="{{ person.GivenName }} {{ person.SurName }}">
@@ -25,13 +25,13 @@ title: Members
         </div>
         {% endfor %}
     </div>
+    {% endif %}
 
+    {% assign phds = site.data.members | where: "role", "PhD Student" %}
+    {% if phds.size > 0 %}
     <hr class="section-divider">
-
     <h1 class="members-section-title">PhD Students</h1>
     <div class="image-grid">
-        {% assign phds = site.data.members | where: "role", "PhD Student" %}
-
         {% for person in phds %}
         <div class="image-grid-item">
             <img src="{{ person.image }}" alt="{{ person.GivenName }} {{ person.SurName }}">
@@ -49,4 +49,78 @@ title: Members
         </div>
         {% endfor %}
     </div>
+    {% endif %}
+
+    {% assign masters = site.data.members | where: "role", "Master Student" %}
+    {% if masters.size > 0 %}
+    <hr class="section-divider">
+    <h1 class="members-section-title">Master Students</h1>
+    <div class="image-grid">
+        {% for person in masters %}
+        <div class="image-grid-item">
+            <img src="{{ person.image }}" alt="{{ person.GivenName }} {{ person.SurName }}">
+            <div class="caption">{{ person.GivenName }} {{ person.SurName }}</div>
+            <div class="social-links">
+                {% for link in person.links %}
+                {% if link.url and link.url != "" %}
+                {% if link.type == "HomePage" %}<a href="{{ link.url }}" target="_blank"><i class="fas fa-home"></i></a>{% endif %}
+                {% if link.type == "github" %}<a href="{{ link.url }}" target="_blank"><i class="fab fa-github"></i></a>{% endif %}
+                {% if link.type == "linkedIn" %}<a href="{{ link.url }}" target="_blank"><i class="fab fa-linkedin"></i></a>{% endif %}
+                {% if link.type == "scholar" %}<a href="{{ link.url }}" target="_blank"><i class="fas fa-graduation-cap"></i></a>{% endif %}
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    {% assign undergrads = site.data.members | where: "role", "Undergraduate Student" %}
+    {% if undergrads.size > 0 %}
+    <hr class="section-divider">
+    <h1 class="members-section-title">Undergraduate Students</h1>
+    <div class="image-grid">
+        {% for person in undergrads %}
+        <div class="image-grid-item">
+            <img src="{{ person.image }}" alt="{{ person.GivenName }} {{ person.SurName }}">
+            <div class="caption">{{ person.GivenName }} {{ person.SurName }}</div>
+            <div class="social-links">
+                {% for link in person.links %}
+                {% if link.url and link.url != "" %}
+                {% if link.type == "HomePage" %}<a href="{{ link.url }}" target="_blank"><i class="fas fa-home"></i></a>{% endif %}
+                {% if link.type == "github" %}<a href="{{ link.url }}" target="_blank"><i class="fab fa-github"></i></a>{% endif %}
+                {% if link.type == "linkedIn" %}<a href="{{ link.url }}" target="_blank"><i class="fab fa-linkedin"></i></a>{% endif %}
+                {% if link.type == "scholar" %}<a href="{{ link.url }}" target="_blank"><i class="fas fa-graduation-cap"></i></a>{% endif %}
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    {% assign alumni = site.data.members | where: "role", "Alumni" %}
+    {% if alumni.size > 0 %}
+    <hr class="section-divider">
+    <h1 class="members-section-title">Alumni</h1>
+    <div class="image-grid">
+        {% for person in alumni %}
+        <div class="image-grid-item">
+            <img src="{{ person.image }}" alt="{{ person.GivenName }} {{ person.SurName }}">
+            <div class="caption">{{ person.GivenName }} {{ person.SurName }}</div>
+            <div class="social-links">
+                {% for link in person.links %}
+                {% if link.url and link.url != "" %}
+                {% if link.type == "HomePage" %}<a href="{{ link.url }}" target="_blank"><i class="fas fa-home"></i></a>{% endif %}
+                {% if link.type == "github" %}<a href="{{ link.url }}" target="_blank"><i class="fab fa-github"></i></a>{% endif %}
+                {% if link.type == "linkedIn" %}<a href="{{ link.url }}" target="_blank"><i class="fab fa-linkedin"></i></a>{% endif %}
+                {% if link.type == "scholar" %}<a href="{{ link.url }}" target="_blank"><i class="fas fa-graduation-cap"></i></a>{% endif %}
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
 </div>
