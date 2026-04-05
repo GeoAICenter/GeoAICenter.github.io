@@ -2,42 +2,47 @@
 layout: default
 title: Publications
 ---
+<div class="page-content">
+    <h1 class="members-section-title">Published Research</h1>
 
-<div class="publications-list">
     {% assign pubs_by_year = site.data.publications | group_by: "year" | sort: "name" | reverse %}
 
-    {% for group in pubs_by_year %}
-    <div class="publication-group">
-        <div class="year-column">
-            <h3>{{ group.name }}</h3>
-        </div>
+    {% for year_group in pubs_by_year %}
+    <div class="content-row">
+        <div class="row-year">{{ year_group.name }}</div>
 
-        <div class="pubs-column">
-            {% for item in group.items %}
-            <div class="publication-item">
+        <div class="row-body" style="flex-direction: column; gap: 3rem;">
 
-                <div class="publication-image">
-                    {% if item.image %}
-                    <img src="{{ item.image }}" alt="Image for {{ item.title }}">
-                    {% endif %}
+            {% for pub in year_group.items %}
+            <div style="display: flex; gap: 1.5rem; align-items: flex-start; width: 100%;">
+
+                {% if pub.image %}
+                <div class="row-image" style="flex: 0 0 250px;">
+                    <img src="{{ pub.image }}" alt="Project image" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.08);">
                 </div>
+                {% endif %}
 
-                <div class="publication-details">
-                    <p class="publication-title">{{ item.title }}</p>
-                    <p class="publication-authors">{{ item.authors }}</p>
-                    <p class="publication-conference">{{ item.conference }}</p>
-                    <div class="publication-links">
-                        {% if item.links.paper_url %}
-                        <a href="{{ item.links.paper_url }}" target="_blank">📄 Paper</a>
+                <div class="row-text" style="flex: 1;">
+                    <h3 style="margin-top: 0; font-size: 1.2rem;">{{ pub.title }}</h3>
+                    <p style="color: #666; margin-bottom: 0.2rem; font-size: 0.95rem;"><strong>Authors:</strong> {{ pub.authors }}</p>
+                    <p style="color: #666; margin-bottom: 0.5rem; font-size: 0.95rem;"><strong>Conference:</strong> {{ pub.conference }}</p>
+                    <p style="margin-top: 0.5rem;">
+
+                        {% if pub.links %}
+                        {% if pub.links.paper_url %}
+                        <a href="{{ pub.links.paper_url }}" target="_blank" style="text-decoration: none; color: #004aad; font-weight: bold;">📄 PDF/Paper</a> &nbsp;&nbsp;
                         {% endif %}
-                        {% if item.links.code_url %}
-                        <a href="{{ item.links.code_url }}" target="_blank">💻 Code</a>
+
+                        {% if pub.links.code_url %}
+                        <a href="{{ pub.links.code_url }}" target="_blank" style="text-decoration: none; color: #004aad; font-weight: bold;">💻 GitHub Code</a>
                         {% endif %}
-                    </div>
+                        {% endif %}
+
+                    </p>
                 </div>
-
             </div>
             {% endfor %}
+
         </div>
     </div>
     {% endfor %}

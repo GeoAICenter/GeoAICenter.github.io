@@ -2,33 +2,34 @@
 layout: default
 title: News
 ---
+<div class="page-content">
+    <h1 class="members-section-title">Lab News</h1>
 
-<div class="publications-list">
-    {% assign pubs_by_year = site.data.news | group_by: "year" | sort: "name" | reverse %}
+    {% assign news_by_year = site.data.news | group_by: "year" | sort: "name" | reverse %}
 
-    {% for group in pubs_by_year %}
-    <div class="publication-group">
-        <div class="year-column">
-            <h3>{{ group.name }}</h3>
-        </div>
+    {% for year_group in news_by_year %}
+    <div class="content-row">
+        <div class="row-year">{{ year_group.name }}</div>
 
-        <div class="pubs-column">
-            {% for item in group.items %}
-            <div class="publication-item">
+        <div class="row-body" style="flex-direction: column; gap: 3rem;">
 
-                <div class="publication-image">
-                    {% if item.image %}
-                    <img src="{{ item.image }}" alt="Image for {{ item.title }}">
-                    {% endif %}
+            {% for item in year_group.items %}
+            <div style="display: flex; gap: 1.5rem; align-items: flex-start; width: 100%;">
+
+                {% if item.image %}
+                <div class="row-image" style="flex: 0 0 250px;">
+                    <img src="{{ item.image }}" alt="News Image" style="width: 100%; border-radius: 8px; max-height: 150px; object-fit: contain;">
                 </div>
+                {% endif %}
 
-                <div class="publication-details">
-                    <p class="publication-title">{{ item.news }}</p>
+                <div class="row-text" style="flex: 1;">
+                    <h3 style="margin-top: 0; font-size: 1.2rem;">{{ item.news }}</h3>
                     <p>{{ item.description }}</p>
                 </div>
 
             </div>
             {% endfor %}
+
         </div>
     </div>
     {% endfor %}
